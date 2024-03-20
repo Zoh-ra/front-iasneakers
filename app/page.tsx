@@ -23,14 +23,14 @@ export default function Home() {
       </div>
       <p className="font-light text-gray-600 w-full max-w-lg text-center mt-6">
         <Link
-          href="https://vercel.com/blob"
+          href="https://github.com/YoMed18/ia-sneakers"
           className="font-medium underline underline-offset-4 hover:text-black transition-colors"
         >
           Sneakers Detector.
         </Link>{' '}
         Created by{' '}
         <Link
-          href="https://nextjs.org/docs"
+          href="https://github.com/YoMed18/ia-sneakers"
           className="font-medium underline underline-offset-4 hover:text-black transition-colors"
         >
           Nicolas, Zohra, Mehdi, Sofiane 

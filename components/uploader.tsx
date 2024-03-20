@@ -4,6 +4,7 @@ import { useState, useCallback, useMemo, ChangeEvent } from 'react'
 import toast from 'react-hot-toast'
 import LoadingDots from './loading-dots'
 import { PutBlobResult } from '@vercel/blob'
+import Link from 'next/link'
 
 export default function Uploader() {
   const [data, setData] = useState<{
@@ -223,9 +224,11 @@ export default function Uploader() {
         {saving ? (
           <LoadingDots color="#808080" />
         ) : (
-          <p className="text-sm">Detection</p>
+          <Link href="/resultat">
+            <p className="text-sm">Detection</p> {/* click */}
+          </Link>
         )}
       </button>
     </form>
-  )
+  );
 }
