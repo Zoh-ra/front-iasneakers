@@ -107,9 +107,9 @@ export default function Uploader() {
     >
       <div>
         <div className="space-y-1 mb-4">
-          <h2 className="text-xl font-semibold">Upload a file</h2>
+          <h2 className="text-xl font-semibold">Insert an image</h2>
           <p className="text-sm text-gray-500">
-            Accepted formats: .png, .jpg, .gif, .mp4
+            Accepted formats: .png, .jpg, .svg
           </p>
         </div>
         <label
@@ -184,12 +184,12 @@ export default function Uploader() {
               <path d="m16 16-4-4-4 4"></path>
             </svg>
             <p className="mt-2 text-center text-sm text-gray-500">
-              Drag and drop or click to upload.
+              Drag and drop or click to detect.
             </p>
             <p className="mt-2 text-center text-sm text-gray-500">
               Max file size: 50MB
             </p>
-            <span className="sr-only">Photo upload</span>
+            <span className="sr-only">Image upload</span>
           </div>
           {data.image && (
             // eslint-disable-next-line @next/next/no-img-element
@@ -223,7 +223,7 @@ export default function Uploader() {
         {saving ? (
           <LoadingDots color="#808080" />
         ) : (
-          <p className="text-sm">Confirm upload</p>
+          <p className="text-sm">Detection</p>
         )}
       </button>
     </form>

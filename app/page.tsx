@@ -9,14 +9,14 @@ export default function Home() {
     <main className="relative flex min-h-screen flex-col items-center justify-center">
       <Toaster />
       <Link
-        href="https://vercel.com/templates/next.js/blob-starter"
+        href="https://github.com/YoMed18/ia-sneakers"
         className="group mt-20 sm:mt-0 rounded-full flex space-x-1 bg-white/30 shadow-sm ring-1 ring-gray-900/5 text-gray-600 text-sm font-medium px-10 py-2 hover:shadow-lg active:shadow-sm transition-all"
       >
-        <p>Deploy your own to Vercel</p>
+        <p>IA FOR SNEAKERS</p>
         <ExpandingArrow />
       </Link>
       <h1 className="pt-4 pb-8 bg-gradient-to-br from-black via-[#171717] to-[#575757] bg-clip-text text-center text-4xl font-medium tracking-tight text-transparent md:text-7xl">
-        Blob on Vercel
+        Sneakers Detector
       </h1>
       <div className="bg-white/30 p-12 shadow-xl ring-1 ring-gray-900/5 rounded-lg backdrop-blur-lg max-w-xl mx-auto w-full">
         <Uploader />
@@ -26,29 +26,20 @@ export default function Home() {
           href="https://vercel.com/blob"
           className="font-medium underline underline-offset-4 hover:text-black transition-colors"
         >
-          Vercel Blob
+          Sneakers Detector.
         </Link>{' '}
-        demo. Built with{' '}
+        Created by{' '}
         <Link
           href="https://nextjs.org/docs"
           className="font-medium underline underline-offset-4 hover:text-black transition-colors"
         >
-          Next.js App Router
+          Nicolas, Zohra, Mehdi, Sofiane 
         </Link>
         .
       </p>
       <div className="sm:absolute sm:bottom-0 w-full px-20 py-10 flex justify-between">
-        <Link href="https://vercel.com">
-          <Image
-            src="/vercel.svg"
-            alt="Vercel Logo"
-            width={100}
-            height={24}
-            priority
-          />
-        </Link>
         <Link
-          href="https://github.com/vercel/examples/tree/main/storage/blob-starter"
+          href="https://github.com/YoMed18/ia-sneakers"
           className="flex items-center space-x-2"
         >
           <Image
@@ -58,7 +49,6 @@ export default function Home() {
             height={24}
             priority
           />
-          <p className="font-light">Source</p>
         </Link>
       </div>
     </main>
