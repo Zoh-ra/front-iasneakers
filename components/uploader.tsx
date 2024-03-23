@@ -3,8 +3,8 @@
 import {useState, useCallback, useMemo, ChangeEvent} from 'react'
 import toast from 'react-hot-toast'
 import LoadingDots from './loading-dots'
-import {PutBlobResult} from '@vercel/blob'
 import Link from 'next/link'
+import {useRouter} from "next/navigation";
 
 export default function Uploader() {
     const [data, setData] = useState<{
@@ -41,6 +41,8 @@ export default function Uploader() {
         return !data.image || saving
     }, [data.image, saving])
 
+    const router = useRouter();
+
     return (
         <form
             className="grid gap-6"
@@ -57,6 +59,12 @@ export default function Uploader() {
                         .then(async (res) => {
                             if (res.status === 200) {
                                 const response = await res.json();
+                                console.log(response)
+                                if (response.result !== null) {
+                                    router.push(`/resultat?result=${encodeURIComponent(response.detected_objects)}`);
+                                } else {
+                                    toast.error("Couldn't detect the image");
+                                }
                             } else {
                                 const error = await res.text();
                                 toast.error(error);
@@ -189,9 +197,7 @@ export default function Uploader() {
                 {saving ? (
                     <LoadingDots color="#808080"/>
                 ) : (
-                    <Link href="/resultat">
-            <p className="text-sm">Detection</p> {/* click */}
-          </Link>
+                        <p className="text-sm">Detection</p>
                 )}
             </button>
         </form>
