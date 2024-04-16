@@ -1,25 +1,26 @@
 "use client";
-import { useState } from "react";
+import React, { useState } from "react";
 
 const MyPage: React.FC = () => {
-  const [textValue, setTextValue] = useState<string>("");
-  const [intValue, setIntValue] = useState<number>(0);
+  const [urlValue, setUrlValue] = useState<string>("");
+  const [stringValue, setStringValue] = useState<string>("");
 
-  const handleTextChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    setTextValue(event.target.value);
+  const handleUrlChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    setUrlValue(event.target.value);
   };
 
-  const handleIntChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    setIntValue(parseInt(event.target.value));
+  const handleStringChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    setStringValue(event.target.value);
   };
 
   const handleSubmit = () => {
-    console.log("Text:", textValue);
-    console.log("Int:", intValue);
+    console.log("URL:", urlValue);
+    console.log("String:", stringValue);
   };
 
   return (
     <div style={{
+        
       textAlign: "center",
       backgroundColor: "#ffffff",
       borderRadius: "10px",
@@ -29,13 +30,13 @@ const MyPage: React.FC = () => {
       marginTop: "300px",
       padding: "20px",
     }}>
-      <h1>Admin Train IA</h1>
+      <h1>Admin Scrap</h1>
       <div>
         <input
-          type="text"
-          placeholder="Chemain"
-          value={textValue}
-          onChange={handleTextChange}
+          type="url"
+          placeholder="Entrez une URL"
+          value={urlValue}
+          onChange={handleUrlChange}
           style={{
             width: "100%",
             padding: "10px",
@@ -47,10 +48,10 @@ const MyPage: React.FC = () => {
       </div>
       <div>
         <input
-          type="number"
-          placeholder="Entrez un nombre entier"
-          value={intValue}
-          onChange={handleIntChange}
+          type="text"
+          placeholder="Nombre d'entrainement"
+          value={stringValue}
+          onChange={handleStringChange}
           style={{
             width: "100%",
             padding: "10px",
